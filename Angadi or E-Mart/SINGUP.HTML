@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            #table{
+                text-align: center;
+            }
+            div{
+                width: 547px;
+                margin: 390px;
+                margin-top: 40px;
+                background-image: url(./Background\ images\ 4.jpg);
+                height: 570px;
+                background-size:cover;
+            }
+            #h{
+                color:blue;
+                font-size: 36px;
+                margin-left: 568px;
+                margin-bottom: -55px;
+            }
+            #b{
+                border-radius: 35px;
+                height: 34px;
+                width: 103px;
+                padding: 0px;
+                background-color: royalblue;
+                margin: 6px; 
+            }
+            #bb{
+                border-radius: 16px;
+                height: 34px;
+                width: 103px;
+                padding: 0px;
+                background-color: rgb(65, 201, 225);
+                margin: 6px; 
+            }
+            #f{
+                font-size: 20px;
+            }
+            #ff{
+                width: 217px;
+                height: 20px;
+                border-radius: 4px;
+            }
+    </style>
+      <script>
+            function password(){
+                let pass = document.getElementById("data").value;
+                let pass1 = document.getElementById("data1").value;
+                let upper=0;
+                let lower=0;
+                let num=0;
+                let special=0;
+                for (i=0;i<pass.length;i++){
+                    if('A'<=pass[i] && 'Z'>=pass[i]){
+                        upper++;
+                    }else if ('a'<=pass[i] && 'z'>=pass[i]){
+                        lower++;
+                    }else if ('0'<=pass[i] && '9'>=pass[i]){
+                        num++;
+                    }else {
+                        special++;
+                    }
+                }
+                if(8<=pass.length && 16>=pass.length && upper>=1 && lower>=1 && num>=1 && special>=1 && pass1==pass){
+                    document.getElementById("result").innerHTML="strong password";
+                    document.getElementById("result").style.color="green";
+                    window.location.href="./angadi.html";
+                }else{
+                    document.getElementById("result").innerHTML="not strong password";
+                    document.getElementById("result").style.color="red";
+                }
+            }
+        </script>
+</head>
+<body>
+    <h4 id="h">SINGUP</h4><br>
+    <div > <br><br>
+        &nbsp;&nbsp;&nbsp;<strong><label id="f">NAME : </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input id="ff" type="text"><br><br>
+    &nbsp;&nbsp;&nbsp;<label id="f">CONTACT NO : </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="ff" type="number"><br><br>
+    &nbsp;&nbsp;&nbsp;<label id="f">OTP : </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="ff" type="text"><br><br>
+    &nbsp;&nbsp;&nbsp;<label id="f">EMAIL ID : </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input id="ff" type="email"><br><br>
+    &nbsp;&nbsp;&nbsp;<label id="f">USER NAME : </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input id="ff" type="text"><br><br>
+    &nbsp;&nbsp;&nbsp;<label id="f">PASSWORD : </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input id="ff" type="password" id="data"><br><br>
+    &nbsp;&nbsp;&nbsp;<label id="f">CONFIRM PASSWORD :</label>&nbsp;&nbsp;
+    <input id="ff" type="password" id ="data1"><br><br>
+    <p id="result"></p><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="./captcha.angadi1.png" width="130" ><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<input id="ff" type="text" ><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" >CAPTCHA<br><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button id="b">CANCEL</button>
+    <button id="bb" onclick="password()">SIGNUP</button></a><br><br>
+</div>
+</body>
+</html>

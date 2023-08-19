@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANGADI</title>
+    <link rel="icon" href="./Angadi logo1.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        body{
+            background-image: url('./Background\ images\ 4.jpg');
+            background-size: cover;
+            width: 1007px;
+            margin: auto;
+           }
+      #p {
+          color: rgb(245, 212, 212);
+           
+         }
+      #f1{
+        width:40%;
+        height: 540px;
+        margin: auto;
+        border-radius: 6%;
+        border: 1px solid black;
+        background-position: center;
+        background-size:cover;
+        margin-left: 313px;
+      }
+      #user_name{
+        border-radius: 28px;
+        margin-top: 10px;
+        padding: 10px; 
+        width: 249px;
+      }
+      #password{
+        border-radius: 28px;
+        margin-top: 10px;
+        padding: 10px; 
+        width: 249px;
+      }
+      #in4{
+        color:rgb(226, 219, 226); 
+        background-color: rgb(3, 161, 135);
+        border-radius: 28px; 
+        width: 110px; 
+        margin-top: 10px;
+        padding: 10px;
+      }
+      #in5{
+           color:rgb(236, 234, 234); 
+           background-color: rgb(10, 126, 204);
+           border-radius: 29px; 
+           width: 111px;
+           margin-top: 10px;
+           padding: 10px;
+      }
+    </style>
+    <script>
+      function login(){
+            let db={
+               "logu":"agalya@123",
+               "agalya":"logu@123", 
+               "aarave":"logu@123",
+               "krish":"logu@123"
+          };
+            let user_name=document.getElementById("user_name").value;
+            let password=document.getElementById("password").value;
+            let key=Object.keys(db);
+            let flag=false;
+            for(let i=0; i<key.length;i++){
+                if(user_name==key[i]){
+                     if(db[key[i]]==password){
+                         flag=true;
+                      }
+                  }
+            }if (flag==true){
+                 window.location.href="./home page.html";
+            }else{
+                 document.getElementById("result").innerHTML="invalied login"
+            }
+       }
+       function result(){
+           window.location.href="./angadi.html";
+       }
+  </script>
+
+</head>
+<body><br><br> 
+    <div id="f1">
+        <form  style="text-align: center;"><br>
+              <img src="logo.png" height="200"width="" style="color: blue;"><br><br>
+              <input  type="text" placeholder="USERNAME" id="user_name"></BR>
+              <input  type="PASSWORD" placeholder="PASSWORD" id="password"><BR>
+              <p id="result"></p>
+        </form><br>
+        <p style="text-align: center;  "><U><A href="./FORGET PASSWORD.HTML" id="p">Forget password?</A><br></U></p>
+        <form action="" style="text-align: center;  "> 
+           <input type="button" class="btn btn-success" id="in4" value="CANCEL"> 
+          <a href="#"><button onclick="login()" type="button" id="in5" class="btn btn-primary" >LOGIN</button></a>
+       </form><br>
+       <u style="text-align: center;width: 100%;display: block;"><label>Are you new user?</label> <A href="./SINGUP.HTML" id="p">SIGNUP</A></U></p>
+    </div>
+<script src="./jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
