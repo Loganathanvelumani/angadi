@@ -1,0 +1,30 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/task_form.css' %}">
+</head>
+<body>
+    <div id="main">
+        <div id="head">
+            <div id="arrow"><i class="fa-solid fa-arrow-left"></i>Back</div>
+        </div>
+        <div id="body">
+            <form action="" method="POST">
+                {% csrf_token %}
+                <label for="">Title:</label><br>
+                <input type="text" name="s_tit" id="input" value="{{value1.Tittel}}"><br><br>
+                <label for="">Descrition:</label><br>
+                <textarea id="input1" cols="50" rows="10" name="s_dec"></textarea><br><br>
+                <label for="">Complete:</label><br>
+                <input type="checkbox" name="check" value="Done"><br><br>
+                <a href="/main"><button type="submit">Submit</button></a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

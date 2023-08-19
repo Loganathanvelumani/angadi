@@ -1,0 +1,81 @@
+#head{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 0px black solid;
+    width: 550px;
+    background-color: orangered;
+    box-shadow: 3px 0px 0px 0px lightgray;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-top: 100px;
+    margin-left: 430px;
+}
+#btn1{
+    background-color: orangered;
+    border: 0px;
+    color: white;
+    padding-top: 10px;
+    padding-left: 500px;
+    position:absolute;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+h1,h4{
+    color: white;
+    padding-left: 10px;
+    font-weight:lighter;
+}
+#body{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    border: 0px black solid;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 550px;
+    height: 30px;
+    box-shadow: 3px 0px 0px 0px lightgray;
+    margin-left:430px ;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#search{
+    height: 30px;
+    border: 1px black solid;
+    border-radius: 5px;
+    width: 300px;
+}
+#btn2{
+    border-radius: 5px;
+    border:  1px black solid;
+}
+#plus{
+    color: orangered;
+    padding-left: 120px;
+    font-size: 30px;
+}
+#foot{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    border-top: 1px lightgray sold;
+    border-color: black;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 40px;
+    width: 550px;
+    box-shadow: 3px 0px 0px 0px lightgray;    
+    margin-left:430px ;
+    
+}
+#xmark1{
+    padding-left: 400px;
+    color: orangered;
+    padding-top: 10px;
+}
+#la{
+    color: black;
+    text-decoration: none;
+}

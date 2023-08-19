@@ -1,0 +1,60 @@
+<!-- {% load static %} -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<body>
+    <div id="">
+        <div id="head">
+            <a href="/login"><button type="submit" id="btn1">Logout</button></a><br>
+            <h1>Hello  {{key}}...</h1>
+            <h4>You have 2 incomplete tasks</h4>
+        </div>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div id="body">
+                <input type="text"  placeholder="Search your task" id="search">
+                <button type="submit" id="btn2" >Search</button>
+                <a href="/task"><i class="fa-regular fa-plus" id="plus"></i></a>
+            </div>
+        </div>
+
+            {% for i in value %}
+                <div id="foot">
+                <table>
+                    <tr>
+                <td><a href="/update/{{i.id}}"><label id="la">{{i.Tittel}}</label></a></td>
+                <td><a href="/delete/{{i.id}}"><i class="fa-solid fa-xmark" id="xmark1"></i></a></td>
+            </tr>
+            </table>
+                </div>
+                {% endfor %}
+
+                
+                <div id="foot">
+                <table>
+                    {% for i in value2 %}
+                    <tr>
+                        <td><s>{{i.Done}}</s></td>
+                        <td><a href="/com_delete/{{i.id}}"><i class="fa-solid fa-xmark" id="xmark1"></i></a></td>
+                    </tr>
+                    {% endfor %}
+                {% for i in value0 %}
+                 <tr>
+                <td><a href="/update/{{i.id}}"><label id="la">{{i.Tittel}}</label></a></td>
+                <td><a href="/delete/{{i.id}}"><i class="fa-solid fa-xmark" id="xmark1"></i></a></td>
+            </tr>
+            {% endfor %}
+            </table>
+                </div>
+                
+
+            </form>
+    
+</body>
+</html>

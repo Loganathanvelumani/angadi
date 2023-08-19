@@ -1,0 +1,50 @@
+#main{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 0px black solid;
+    border-radius: 5px;
+    width: 500px;
+    height: 350px;
+    margin-top: 100px;
+    margin-left: 430px;
+    box-shadow: 2px 2px 2px 2px lightslategray;
+}
+#head{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border: 0px black solid;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: orangered;
+}
+h1{
+    font-weight: lighter;
+    color: white;
+    padding-left: 10px;
+}
+#body{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border: 0px black solid;
+    padding-top: 40px;
+    padding-left: 20px;
+}
+button{
+    color: orangered;
+}
+a{
+    color: black;
+}
+label{
+    color: lightslategray;
+}
+input{
+    width: 430px;
+    height: 20px;
+    border: 1px black solid;
+    border-radius: 5px;
+}
